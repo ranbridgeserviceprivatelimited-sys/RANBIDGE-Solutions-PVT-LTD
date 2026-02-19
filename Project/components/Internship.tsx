@@ -269,11 +269,20 @@ const Internship: React.FC = () => {
                     <h5 className="text-white font-semibold mb-3">Skills You'll Learn:</h5>
                     <div className="flex flex-wrap gap-2">
                       {program.skills.map((skill, skillIndex) => (
-                        <span key={skillIndex} className="bg-blue-600/20 text-blue-300 px-3 py-1 rounded-lg text-sm">
-                          {skill}
-                        </span>
+                        <span key={skillIndex} className="bg-blue-600/20 text-blue-300 px-3 py-1 rounded-lg text-sm">{skill}</span>
                       ))}
                     </div>
+                  </div>
+                  
+                  <div className="mt-6 pt-4 border-t border-slate-700/50">
+                    <a
+                      href="https://forms.gle/esK6TANvsz5Xwb4q9"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block w-full text-center bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-colors shadow-lg"
+                    >
+                      Apply Now
+                    </a>
                   </div>
                 </div>
               </div>
