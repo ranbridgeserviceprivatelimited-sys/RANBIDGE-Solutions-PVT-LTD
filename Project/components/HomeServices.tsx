@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Code, Database, Globe, Smartphone, Cloud, Shield } from "lucide-react";
 
 const HomeServices: React.FC = () => {
@@ -99,18 +100,18 @@ const HomeServices: React.FC = () => {
               We tailor our services to meet your specific business needs and goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/services"
+              <Link
+                to="/services"
                 className="inline-flex items-center gap-3 px-8 py-4 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-colors"
               >
                 View All Services
-              </a>
-              <a
-                href="/contact"
+              </Link>
+              <Link
+                to="/contact"
                 className="inline-flex items-center gap-3 px-8 py-4 border border-white/30 bg-white/10 backdrop-blur-md text-white font-semibold rounded-xl hover:bg-white/20 transition-colors"
               >
                 Get Quote
-              </a>
+              </Link>
             </div>
           </div>
         </div>
