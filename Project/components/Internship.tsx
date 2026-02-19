@@ -257,10 +257,6 @@ const Internship: React.FC = () => {
                     <span className="text-slate-300 font-medium">Duration: {program.duration}</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                    <span className="text-slate-300 font-medium">Mentorship: {program.mentorship}</span>
-                  </div>
-                  <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-amber-500 rounded-full"></div>
                     <span className="text-slate-300 font-medium">Projects: {program.projects}</span>
                   </div>
