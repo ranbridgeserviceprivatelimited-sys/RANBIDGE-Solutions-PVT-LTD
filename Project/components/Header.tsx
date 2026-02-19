@@ -226,8 +226,15 @@ const Header: React.FC = () => {
               })}
             </nav>
 
-            {/* MOBILE MENU PLACEHOLDER */}
-            <div className="lg:hidden flex justify-end" />
+            {/* MOBILE MENU BUTTON - Right End */}
+            <div className="lg:hidden flex justify-end items-center col-start-3">
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className={`p-2 rounded-full transition-colors ${isOnHero ? "bg-blue-600 text-white" : "bg-slate-800 text-blue-400 hover:bg-slate-700"}`}
+              >
+                {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+              </button>
+            </div>
 
           </div>
         </div>
