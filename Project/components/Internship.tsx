@@ -76,15 +76,6 @@ const Internship: React.FC = () => {
       skills: ["Python", "Flask", "HTML/CSS/JavaScript", "SQLAlchemy", "Jinja2", "API Development"],
       mentorship: "1:1 Personal Mentorship", 
       projects: "1 Capstone Project"
-    },
-    {
-      title: "Virtual Internship Program",
-      mode: "Virtual",
-      duration: "4-8 Weeks",
-      description: "Comprehensive virtual internship experience with flexible learning schedule and remote collaboration tools",
-      skills: ["Remote Collaboration", "Digital Communication", "Project Management", "Time Management", "Virtual Teamwork", "Documentation"],
-      mentorship: "1:1 Personal Mentorship",
-      projects: "2 Virtual Team Projects"
     }
   ];
 
