@@ -7,7 +7,6 @@ import Domains from "./components/Domains";
 import Internship from "./components/Internship";
 import Contact from "./components/Contact";
 import ChatWidget from "./components/ChatWidget";
-import Cursor from "./components/Cursor";
 import Footer from "./components/Footer";
 import { useEffect } from "react";
 import { gsap } from "gsap";
@@ -39,7 +38,6 @@ function App() {
     <BrowserRouter>
       <ThreeBackground />
       {/* Global UI */}
-      <Cursor />
       <Header />
 
       {/* Page Routes */}
@@ -53,8 +51,8 @@ function App() {
       </Routes>
 
       {/* Global Components */}
-      <Footer />
       <ChatWidget />
+      <Footer />
     </BrowserRouter>
   );
 }
