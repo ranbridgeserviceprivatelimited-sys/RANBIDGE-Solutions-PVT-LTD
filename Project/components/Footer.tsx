@@ -97,9 +97,16 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-slate-800 mt-8 sm:mt-12 pt-6 sm:pt-8 text-center">
-          <p className="text-slate-400 text-xs sm:text-sm">
-            2025 Ranbidge Solutions Pvt Ltd. All rights reserved.
-          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-slate-400 text-xs sm:text-sm">
+            <span> 2025 Ranbidge Solutions Pvt Ltd. All rights reserved.</span>
+            <span className="hidden sm:inline">•</span>
+            <Link 
+              to="/privacy-policy" 
+              className="text-blue-400 hover:text-blue-300 transition-colors"
+            >
+              Privacy Policy
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

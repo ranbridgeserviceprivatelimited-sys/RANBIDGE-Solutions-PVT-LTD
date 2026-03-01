@@ -6,6 +6,7 @@ import Services from "./components/Services";
 import Domains from "./components/Domains";
 import Internship from "./components/Internship";
 import Contact from "./components/Contact";
+import PrivacyPolicy from "./components/PrivacyPolicy";
 import ChatWidget from "./components/ChatWidget";
 import Footer from "./components/Footer";
 import { useEffect } from "react";
@@ -48,6 +49,7 @@ function App() {
         <Route path="/domains" element={<Domains />} />
         <Route path="/internship" element={<Internship />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
 
       {/* Global Components */}
