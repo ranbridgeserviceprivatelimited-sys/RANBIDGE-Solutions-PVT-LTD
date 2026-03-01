@@ -1,4 +1,4 @@
-# Ranbridge Solutions Private Limited
+# Ranbidge Solutions Private Limited
 
 A modern IT solutions company providing comprehensive web development, software development, cloud services, and digital transformation solutions.
 
