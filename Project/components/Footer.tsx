@@ -98,7 +98,7 @@ const Footer: React.FC = () => {
 
         <div className="border-t border-slate-800 mt-8 sm:mt-12 pt-6 sm:pt-8 text-center">
           <p className="text-slate-400 text-xs sm:text-sm">
-            © 2025 Ranbidge Solutions Pvt Ltd. All rights reserved.
+            2025 Ranbidge Solutions Pvt Ltd. All rights reserved.
           </p>
         </div>
       </div>

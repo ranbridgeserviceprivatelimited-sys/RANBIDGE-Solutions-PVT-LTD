@@ -1,4 +1,4 @@
-# Ranbridge Solutions Private Limited
+# Ranbidge Solutions Private Limited
 
 A modern IT solutions company providing comprehensive web development, software development, cloud services, and digital transformation solutions.
 
@@ -208,7 +208,7 @@ docker-compose up --build
 ### Contact Information
 - **Email**: info@ranbidge.com
 - **Phone**: +91 82473 92437
-- **Address**: Hyderabad, Telangana, India
+- **Address**: Narasaraopet, Andhra Pradesh, India
 
 ### Social Media
 - **LinkedIn**: [Ranbridge Solutions](https://www.linkedin.com/in/ranbidge-solutions-private-limited-company-a98983376)
@@ -235,4 +235,4 @@ For SEO implementation guide, see [Project/public/SEO-README.md](./Project/publi
 
 ---
 
-**© 2024 Ranbridge Solutions Private Limited. All rights reserved.**
+**© 2026 Ranbidge Solutions Private Limited. All rights reserved.**

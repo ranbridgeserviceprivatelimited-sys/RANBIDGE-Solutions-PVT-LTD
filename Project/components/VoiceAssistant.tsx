@@ -196,7 +196,7 @@ const VoiceAssistant: React.FC<VoiceAssistantProps> = ({
       {/* Voice Controls */}
       <div className="mt-3 flex items-center gap-2">
         <button
-          onClick={() => speak('Hello! I am Ranbo, your AI assistant. How can I help you today?')}
+          onClick={() => speak('Hello! I am your AI assistant. How can I help you today?')}
           className="p-2 bg-slate-700 text-slate-300 rounded-lg hover:bg-slate-600 transition-colors"
           title="Test voice output"
         >

@@ -48,7 +48,7 @@ const ChatWidget: React.FC = () => {
   const [message, setMessage] = useState("");
   const [voiceEnabled, setVoiceEnabled] = useState(true);
 
-  const greetingText = "Hi! 👋 I'm Ranbo. Drop your details below, and I'll send them directly to our team's email for a quick response!";
+  const greetingText = "Hi! 👋 Welcome to Ranbridge Solutions. Drop your details below, and we'll send them directly to our team for a quick response!";
   const animatedGreeting = useChatTypingEffect(greetingText, isOpen && !submitted);
 
   const setQuickMessage = (msg: string) => {
@@ -157,7 +157,7 @@ const ChatWidget: React.FC = () => {
                 <div className="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 bg-green-500 rounded-full border-[3px] border-slate-950"></div>
               </div>
               <div>
-                <h4 className="font-bold text-white text-sm leading-tight">Ranbo</h4>
+                <h4 className="font-bold text-white text-sm leading-tight">Ranbridge</h4>
                 <p className="text-[9px] text-slate-500 uppercase tracking-widest font-black">AI Assistant</p>
               </div>
             </div>
@@ -232,7 +232,7 @@ const ChatWidget: React.FC = () => {
                     className="w-full bg-slate-900 border border-slate-800 px-4 py-3.5 rounded-xl text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
                   />
                   <textarea
-                    placeholder="How can Ranbo help you?"
+                    placeholder="How can we help you?"
                     rows={3}
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
@@ -266,7 +266,7 @@ const ChatWidget: React.FC = () => {
                       flex items-center justify-center gap-2
                     "
                   >
-                    <MessageCircle size={18} /> Chat with Ranbo
+                    <MessageCircle size={18} /> Chat on WhatsApp
                   </a>
                 </form>
               </div>
@@ -278,7 +278,7 @@ const ChatWidget: React.FC = () => {
                 </div>
                 <h5 className="text-white font-black text-xl mb-2 italic">Success!</h5>
                 <p className="text-sm text-slate-400">
-                  Thanks <b>{name}</b>. Ranbo has received your message. We'll be in touch!
+                  Thanks <b>{name}</b>. Your message has been received. We'll be in touch!
                 </p>
                 <button
                   onClick={() => setIsOpen(false)}
