@@ -266,7 +266,7 @@ const ChatWidget: React.FC = () => {
                       flex items-center justify-center gap-2
                     "
                   >
-                    <MessageCircle size={18} /> Chat on WhatsApp
+                    <MessageCircle size={18} /> Chat with Ranbo
                   </a>
                 </form>
               </div>
