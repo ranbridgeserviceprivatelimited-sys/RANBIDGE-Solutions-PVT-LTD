@@ -48,7 +48,7 @@ const ChatWidget: React.FC = () => {
   const [message, setMessage] = useState("");
   const [voiceEnabled, setVoiceEnabled] = useState(true);
 
-  const greetingText = "Hi! 👋 Welcome to Ranbridge Solutions. Drop your details below, and we'll send them directly to our team for a quick response!";
+  const greetingText = "Hi! 👋 Welcome to Ranbidge Solutions. Drop your details below, and we'll send them directly to our team for a quick response!";
   const animatedGreeting = useChatTypingEffect(greetingText, isOpen && !submitted);
 
   const setQuickMessage = (msg: string) => {
