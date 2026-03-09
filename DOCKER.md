@@ -13,7 +13,6 @@ This project includes Docker configuration for containerized deployment, ensurin
 
 1. **Build and run with Docker Compose:**
    ```bash
-   cd Project
    docker-compose up --build
    ```
 

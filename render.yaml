@@ -3,7 +3,7 @@ services:
     name: ranbidge-solutions-website
     env: static
     buildCommand: chmod +x render-build.sh && ./render-build.sh
-    publishDir: Project/dist
+    publishDir: dist
     headers:
       - path: /*
         name: X-Frame-Options

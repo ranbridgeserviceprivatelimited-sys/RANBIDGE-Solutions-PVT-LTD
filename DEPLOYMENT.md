@@ -27,7 +27,7 @@ In your Render dashboard, add these environment variables:
 
 2. **Configure Build Settings**
    - **Build Command**: `chmod +x render-build.sh && ./render-build.sh`
-   - **Publish Directory**: `Project/dist`
+   - **Publish Directory**: `dist`
    - **Root Directory**: Leave empty (repository root)
 
 3. **Add Environment Variables**

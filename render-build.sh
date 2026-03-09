@@ -4,9 +4,6 @@
 
 echo "Starting build process..."
 
-# Navigate to project directory
-cd Project
-
 # Install dependencies
 echo "Installing dependencies..."
 npm install
