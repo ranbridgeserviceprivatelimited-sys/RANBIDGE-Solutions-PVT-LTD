@@ -1,213 +1,238 @@
-# RANBRIDGE SOLUTIONS PRIVATE LIMITED
+# Ranbidge Solutions Private Limited
 
-## 🏢 Company Overview
+A modern IT solutions company providing comprehensive web development, software development, cloud services, and digital transformation solutions.
 
-Ranbridge Solutions Private Limited is a leading technology company specializing in bridging the gap between academics and industry excellence. We provide comprehensive digital solutions, training programs, and consulting services to help businesses and individuals thrive in the modern digital landscape.
+## 🚀 Quick Start
 
-## 🌟 Our Mission
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
+- Git
 
-To empower businesses and individuals with cutting-edge technology solutions and industry-relevant skills, fostering growth and innovation in the digital era.
+### Installation
+```bash
+# Clone the repository
+git clone https://github.com/ranbridgeserviceprivatelimited-sys/RANBIDGE-Solutions-PVT-LTD.git
 
-## 🚀 Services We Offer
+# Navigate to project directory
+cd RANBIDGE-Solutions-PVT-LTD/Project
 
-### 💻 Web Development
-- Custom website development
-- Web application development
-- E-commerce solutions
-- Responsive design
-- API integration
-- React, Vue, Angular development
+# Install dependencies
+npm install
 
-### 📊 Data Analytics
-- Data visualization
-- Machine learning solutions
-- Business intelligence
-- Predictive analytics
-- Data-driven insights
+# Start development server
+npm run dev
+```
 
-### 📱 Mobile Development
-- iOS and Android app development
-- Cross-platform solutions (React Native, Flutter)
-- App store deployment
-- Mobile UI/UX design
+### Available Scripts
+```bash
+npm run dev      # Start development server (http://localhost:3000)
+npm run build    # Build for production
+npm run preview   # Preview production build
+npm run start    # Start production server
+```
 
-### ☁️ Cloud Solutions
-- Cloud infrastructure setup
-- Cloud migration services
-- DevOps implementation
-- Serverless architecture
-- AWS, Azure, GCP expertise
+## 🏗️ Project Structure
 
-### 🔒 Cybersecurity
-- Security audits and assessments
-- Penetration testing
-- Compliance management
-- Security training
-- Threat protection
+```
+RANBIDGE-Solutions-PVT-LTD/
+├── Project/                          # Main application directory
+│   ├── components/                 # React components
+│   │   ├── Header.tsx             # Navigation header
+│   │   ├── Home.tsx               # Homepage section
+│   │   ├── About.tsx              # About page
+│   │   ├── Services.tsx            # Services page
+│   │   ├── Domains.tsx             # Domains page
+│   │   ├── Internship.tsx          # Internship page
+│   │   ├── Contact.tsx              # Contact page
+│   │   ├── Footer.tsx              # Footer component
+│   │   └── ...                    # Other components
+│   ├── public/                     # Static assets
+│   │   ├── company-info.json        # Company information for SEO
+│   │   ├── opensearch.xml          # Browser search integration
+│   │   ├── manifest.json            # PWA manifest
+│   │   ├── organization.json        # Schema.org structured data
+│   │   └── SEO-README.md          # SEO implementation guide
+│   ├── src/                        # Source files
+│   ├── App.tsx                    # Main App component
+│   ├── index.html                  # HTML template
+│   ├── index.css                   # Global styles
+│   ├── vite.config.ts              # Vite configuration
+│   ├── tsconfig.json               # TypeScript configuration
+│   └── package.json                # Dependencies and scripts
+├── render.yaml                      # Render deployment configuration
+├── render-build.sh                  # Render build script
+├── docker-compose.yml               # Docker configuration
+├── Dockerfile                      # Docker container setup
+└── DEPLOYMENT.md                   # Deployment guide
+```
 
-### 📈 Digital Marketing
-- SEO optimization
-- Social media marketing
-- Content strategy
-- PPC campaigns
-- Brand development
+## 🛠️ Technologies Used
 
-## 👥 HR Solutions
+### Frontend
+- **React 19** - UI framework
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Utility-first CSS framework
+- **GSAP** - Animation library
+- **Lucide React** - Icon library
+- **React Router** - Client-side routing
 
-We offer comprehensive human resource management solutions:
+### Build Tools
+- **Vite** - Build tool and dev server
+- **TypeScript** - Compilation and type checking
 
-- **Talent Recruitment**: Advanced recruitment strategies and screening
-- **Performance Management**: Employee tracking and analytics
-- **Compliance & Safety**: Workplace compliance monitoring
-- **Payroll Management**: Automated payroll processing
-- **Training & Development**: Employee skill enhancement programs
-- **HR Analytics**: Data-driven HR decision making
+### Deployment
+- **Render** - Cloud hosting platform
+- **Docker** - Containerization
+- **Nginx** - Web server
 
-## 🎓 Training & Development
+## 🌐 Features
 
-### Technical Training
-- Web development bootcamps
-- Mobile app development courses
-- Data science and analytics
-- Cloud computing training
-- Cybersecurity fundamentals
+### Core Functionality
+- **Responsive Design** - Mobile-first approach
+- **Smooth Animations** - GSAP-powered interactions
+- **SEO Optimized** - Meta tags, structured data, sitemaps
+- **Progressive Web App** - PWA capabilities
+- **Browser Search Integration** - OpenSearch support
+- **Voice Assistant** - AI-powered interactions
+- **Contact Forms** - Multi-channel communication
 
-### Professional Development
-- Soft skills training
-- Leadership development
-- Project management
-- Business communication
-- Career counseling
+### Pages
+- **Home** - Hero section with services overview
+- **About** - Company information and team
+- **Services** - Detailed service offerings
+- **Domains** - Technical expertise areas
+- **Internship** - Internship program details
+- **Contact** - Contact form and information
 
-## 🛠️ Technology Stack
+## 🔧 Development
 
-### Frontend Technologies
-- React, Vue.js, Angular
-- HTML5, CSS3, JavaScript/TypeScript
-- Tailwind CSS, Bootstrap
-- Next.js, Gatsby
+### Environment Setup
+1. Clone the repository
+2. Navigate to `Project/` directory
+3. Run `npm install`
+4. Start development with `npm run dev`
 
-### Backend Technologies
-- Node.js, Python, Java
-- Express.js, Django, Spring Boot
-- RESTful APIs, GraphQL
-- Microservices architecture
+### Code Style
+- **TypeScript** for type safety
+- **Functional components** with React hooks
+- **Tailwind CSS** for styling
+- **ESLint** for code quality
 
-### Database Systems
-- MySQL, PostgreSQL, MongoDB
-- Redis, Elasticsearch
-- Database optimization
-- Data modeling
+### Git Workflow
+```bash
+# Create feature branch
+git checkout -b feature-name
 
-### Cloud & DevOps
-- AWS, Azure, Google Cloud Platform
-- Docker, Kubernetes
-- CI/CD pipelines
-- Infrastructure as Code (Terraform)
+# Make changes
+# ... edit files ...
 
-## 🌐 Our Projects
+# Commit changes
+git add .
+git commit -m "Add feature description"
 
-We have successfully delivered numerous projects across various industries:
+# Push to remote
+git push origin feature-name
 
-- **E-commerce Platforms**: Scalable online stores with advanced features
-- **Enterprise Applications**: Custom business solutions
-- **Mobile Applications**: User-friendly iOS and Android apps
-- **Data Analytics Dashboards**: Real-time business intelligence tools
-- **Educational Platforms**: Learning management systems
+# Merge to main
+git checkout main
+git merge feature-name
+git push origin main
+```
 
-## 📞 Contact Information
+## 🚀 Deployment
 
-### 📍 Office Address
-Ravindra Nagar, Narasaraopet,  
-Andhra Pradesh, India - 522601
+### Local Development
+```bash
+# Build for production
+npm run build
 
-### 📧 Email
-ranbidgesoutionspvtltd@gmail.com
+# Preview production build
+npm run preview
+```
 
-### 📞 Phone
-+91 82473 92437
+### Docker Deployment
+```bash
+# Build and run with Docker
+docker-compose up --build
 
-### 🌐 Website
-[https://ranbridgeserviceprivatelimited-sys.github.io/Company-Website/](https://ranbridgeserviceprivatelimited-sys.github.io/Company-Website/)
+# Access at http://localhost:3000
+```
 
-## 🔗 Connect With Us
+### Render Deployment
+1. Connect repository to [Render](https://render.com)
+2. Configure build settings:
+   - **Build Command**: `chmod +x render-build.sh && ./render-build.sh`
+   - **Publish Directory**: `Project/dist`
+   - **Environment Variables**: `NODE_ENV=production`
+
+## 📱 Mobile Optimization
+
+- **Responsive Design** - Mobile-first CSS approach
+- **Touch-Friendly** - Optimized for touch interactions
+- **Performance** - Lazy loading and optimization
+- **PWA Support** - App shortcuts and offline capabilities
+
+## 🔍 SEO Features
+
+- **Meta Tags** - Title, description, keywords
+- **Open Graph** - Social media sharing
+- **Twitter Cards** - Twitter optimization
+- **Structured Data** - Schema.org markup
+- **Browser Search** - OpenSearch integration
+- **Sitemap** - XML sitemap for search engines
+- **Canonical URLs** - Prevent duplicate content
+
+## 📊 Analytics & Monitoring
+
+### Search Console
+- Google Search Console integration
+- Bing Webmaster Tools setup
+- Performance monitoring
+
+### SEO Metrics
+- Search ranking tracking
+- Organic traffic monitoring
+- Backlink analysis
+
+## 🔐 Security
+
+### Implementation
+- **HTTPS Only** - All connections use SSL/TLS
+- **Security Headers** - X-Frame-Options, CSP, XSS protection
+- **Input Validation** - Form sanitization and validation
+- **Dependency Updates** - Regular security patching
+
+## 🤝 Support
+
+### Contact Information
+- **Email**: info@ranbidge.com
+- **Phone**: +91 82473 92437
+- **Address**: Narasaraopet, Andhra Pradesh, India
 
 ### Social Media
-- [Facebook](https://www.facebook.com/profile.php?id=61578597456959)
-- [LinkedIn](https://www.linkedin.com/in/ranbidge-solutions-private-limited-company-a98983376)
-- [Instagram](https://www.instagram.com/rspl_academy?igsh=MXE3NWY3ZmNiNmtucg==)
-- [Twitter/X](https://x.com/RanbridgePvtLtd)
-- [YouTube](https://www.youtube.com/@RSPL-Academy)
+- **LinkedIn**: [Ranbridge Solutions](https://www.linkedin.com/in/ranbidge-solutions-private-limited-company-a98983376)
+- **Facebook**: [Ranbridge Solutions](https://www.facebook.com/profile.php?id=61578597456959)
+- **Instagram**: [@rspl_academy](https://www.instagram.com/rspl_academy)
+- **Twitter**: [@RanbridgePvtLtd](https://x.com/RanbridgePvtLtd)
+- **YouTube**: [@RSPL-Academy](https://www.youtube.com/@RSPL-Academy)
 
-### WhatsApp
-[Chat with us on WhatsApp](https://wa.me/918247392437)
+## 📝 License
 
-## 💼 Why Choose Ranbridge Solutions?
+This project is proprietary software owned by Ranbridge Solutions Private Limited.
 
-### ✅ Expert Team
-- Experienced professionals with industry expertise
-- Continuous learning and skill development
-- Client-focused approach
+## 🤝 Contributing
 
-### ✅ Quality Assurance
-- Rigorous testing processes
-- Industry best practices
-- Continuous improvement
+We welcome feedback and suggestions for improving our website. Please contact us at info@ranbidge.com.
 
-### ✅ Customer Support
-- 24/7 technical support
-- Regular maintenance and updates
-- Dedicated account managers
+## 📄 Documentation
 
-### ✅ Competitive Pricing
-- Transparent pricing models
-- Value for money
-- Flexible payment options
+For detailed deployment instructions, see [DEPLOYMENT.md](./DEPLOYMENT.md).
 
-## 🎯 Our Values
+For Docker setup instructions, see [DOCKER.md](./Project/DOCKER.md).
 
-- **Innovation**: Embracing cutting-edge technologies
-- **Integrity**: Transparent and honest business practices
-- **Excellence**: Delivering high-quality solutions
-- **Collaboration**: Working together for success
-- **Growth**: Continuous learning and improvement
-
-## 📊 Company Statistics
-
-- **Projects Delivered**: 100+
-- **Happy Clients**: 50+
-- **Team Members**: 20+
-- **Years of Experience**: 5+
-- **Training Programs**: 30+
-
-## 🏆 Certifications & Partnerships
-
-- ISO 9001:2015 Certified
-- Microsoft Gold Partner
-- AWS Certified Partner
-- Google Cloud Partner
-- Authorized Training Center
-
-## 📈 Future Goals
-
-- Expand our global presence
-- Launch innovative products
-- Develop strategic partnerships
-- Enhance training programs
-- Contribute to open-source community
-
-## 🤝 Let's Work Together
-
-Ready to transform your business with cutting-edge technology solutions? Get in touch with us today!
-
-- **For Business Inquiries**: Contact our sales team
-- **For Training Programs**: Reach out to our education department
-- **For Technical Support**: Connect with our support team
-- **For Career Opportunities**: Check our careers page
+For SEO implementation guide, see [Project/public/SEO-README.md](./Project/public/SEO-README.md).
 
 ---
 
-**Ranbridge Solutions Private Limited**  
-*Bridging the Gap Between Academics and Industry Excellence*
-
-© 2025 Ranbridge Solutions Private Limited. All rights reserved.
+**© 2026 Ranbidge Solutions Private Limited. All rights reserved.**
