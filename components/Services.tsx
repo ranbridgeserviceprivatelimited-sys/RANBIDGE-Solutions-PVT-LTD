@@ -86,10 +86,10 @@ const Services: React.FC = () => {
           <h2 className="text-blue-600 font-bold uppercase tracking-wider text-xs sm:text-sm mb-3 sm:mb-4">
             Core Services
           </h2>
-          <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-4 sm:mb-6">
-            Comprehensive Support for Academic & Career Excellence
+          <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-4 sm:mb-6">
+            Comprehensive Support for <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Academic & Career Excellence</span>
           </h3>
-          <p className="text-base sm:text-lg text-slate-700 font-medium leading-relaxed">
+          <p className="text-base sm:text-lg text-slate-800 font-semibold leading-relaxed">
             We provide structured, industry-aligned services that empower
             students, institutions, and professionals to succeed in today's
             competitive environment.

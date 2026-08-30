@@ -49,7 +49,7 @@ const Process: React.FC = () => {
   return (
     <section ref={sectionRef} id="process" className="py-32 relative bg-transparent overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-5xl font-black text-center mb-24 text-slate-900 font-heading uppercase tracking-tight">
+        <h2 className="text-5xl font-black text-center mb-24 text-white font-heading uppercase tracking-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
           Development Roadmap
         </h2>
 

@@ -90,22 +90,22 @@ const About: React.FC = () => {
           ref={storyRef}
           className="max-w-4xl mx-auto text-center space-y-6"
         >
-          <h2 className="text-blue-600 uppercase tracking-wider text-sm font-bold">
+          <h2 className="text-blue-400 uppercase tracking-wider text-sm font-bold drop-shadow-[0_1px_6px_rgba(0,0,0,0.8)]">
             About Ranbidge
           </h2>
 
-          <h3 className="text-4xl md:text-5xl font-extrabold text-slate-900">
+          <h3 className="text-4xl md:text-5xl font-extrabold text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
             Bridging Education with
-            <span className="text-blue-600"> Industry Reality</span>
+            <span className="text-blue-400"> Industry Reality</span>
           </h3>
 
-          <p className="text-lg text-slate-700 leading-relaxed">
+          <p className="text-lg text-white font-semibold leading-relaxed drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
             <strong>RANBIDGE Solutions Private Limited</strong> is built with a
             single purpose — to close the gap between academic learning and
             real-world industry expectations.
           </p>
 
-          <p className="text-lg text-slate-700 leading-relaxed">
+          <p className="text-lg text-white font-semibold leading-relaxed drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
             We partner with colleges, students, and organizations to deliver
             structured programs, live internships, and industry-aligned skill
             development.

@@ -71,13 +71,13 @@ const HomeProjects: React.FC = () => {
         <section ref={sectionRef} className="py-24 bg-transparent">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16">
-                    <h2 className="text-blue-600 font-bold uppercase tracking-wider text-sm mb-4">
+                    <h2 className="text-blue-400 font-bold uppercase tracking-wider text-sm mb-4 drop-shadow-[0_1px_6px_rgba(0,0,0,0.8)]">
                         Our Results
                     </h2>
-                    <h3 className="text-4xl sm:text-5xl font-extrabold text-slate-900">
+                    <h3 className="text-4xl sm:text-5xl font-extrabold text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
                         Featured Projects
                     </h3>
-                    <p className="mt-4 text-slate-700 font-medium text-lg max-w-2xl mx-auto">
+                    <p className="mt-4 text-white font-semibold text-lg max-w-2xl mx-auto drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
                         A glimpse into the innovative solutions we've delivered for our clients and partners.
                     </p>
                 </div>

@@ -47,10 +47,10 @@ const HomeServices: React.FC = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-4 drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
             Our Services
           </h2>
-          <p className="text-lg sm:text-xl text-slate-700 font-medium max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl text-white font-semibold max-w-3xl mx-auto leading-relaxed drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
             Comprehensive solutions to help your business thrive in the digital age
           </p>
         </div>
