@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Render Build Script for Ranbridge Solutions Website
+
+echo "Starting build process..."
+
+# Install dependencies
+echo "Installing dependencies..."
+npm install
+
+# Set environment variables
+export NODE_ENV=production
+export GEMINI_API_KEY=$GEMINI_API_KEY
+
+# Build the application
+echo "Building the application..."
+npm run build
+
+# Copy index.html to 404.html for SPA static host fallback
+cp dist/index.html dist/404.html
+
+echo "Build completed successfully!"
+
+# List the contents of the dist directory
+echo "Build output:"
+ls -la dist/

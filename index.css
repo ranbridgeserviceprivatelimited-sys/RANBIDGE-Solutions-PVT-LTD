@@ -1,0 +1,42 @@
+/* Custom Global Styles for Ranbidge Solutions */
+
+@layer utilities {
+  .glass-panel {
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(51, 65, 85, 0.5);
+  }
+}
+
+/* Base custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3b82f6;
+}
+
+/* Global Smooth behavior & Zoom-out mode scale */
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+  font-size: 90%; /* Compact ~90% zoomed-out scale */
+}
+
+@media (min-width: 1280px) {
+  html {
+    font-size: 88%; /* Spacious compact view on desktop screens */
+  }
+}
