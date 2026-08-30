@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
               <a href="https://www.facebook.com/profile.php?id=61578597456959" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:text-blue-600 transition-colors p-2 bg-white rounded-full border border-slate-200 shadow-xs">
                 <Facebook size={20} />
               </a>
-              <a href="https://www.instagram.com/rspl_academy?igsh=MXE3NWY3ZmNiNmtucg==" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:text-blue-600 transition-colors p-2 bg-white rounded-full border border-slate-200 shadow-xs">
+              <a href="https://www.instagram.com/ranbidge_solutions/" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:text-blue-600 transition-colors p-2 bg-white rounded-full border border-slate-200 shadow-xs">
                 <Instagram size={20} />
               </a>
               <a href="https://www.linkedin.com/in/ranbidge-solutions-private-limited-company-a98983376" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:text-blue-600 transition-colors p-2 bg-white rounded-full border border-slate-200 shadow-xs">

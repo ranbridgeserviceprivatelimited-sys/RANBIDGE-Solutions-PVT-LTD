@@ -137,7 +137,7 @@ const Header: React.FC = () => {
             </a>
 
             <a
-              href="https://www.instagram.com/rspl_academy?igsh=MXE3NWY3ZmNiNmtucg=="
+              href="https://www.instagram.com/ranbidge_solutions/"
               target="_blank"
               rel="noopener noreferrer"
               onMouseEnter={handleIconHover}
