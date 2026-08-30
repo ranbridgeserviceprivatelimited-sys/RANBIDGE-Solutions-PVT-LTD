@@ -12,8 +12,8 @@ const ThreeBackground: React.FC = () => {
 
         // --- SCENE SETUP ---
         const scene = new THREE.Scene();
-        // Dark slate/blue theme base
-        scene.background = new THREE.Color('#0f172a');
+        // Clean white background
+        scene.background = new THREE.Color('#ffffff');
 
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
         camera.position.z = 20;
@@ -181,16 +181,17 @@ const ThreeBackground: React.FC = () => {
     return (
         <div
             ref={mountRef}
-            className="fixed top-0 left-0 w-full h-full -z-10 pointer-events-none transition-all duration-1000 ease-in-out"
-            style={{
-                background: location.pathname === '/'
-                    ? `linear-gradient(to right bottom, rgba(15, 23, 42, 0.9), rgba(30, 58, 138, 0.85)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop')` // Business Team Collaboration
-                    : 'linear-gradient(135deg, #020617 0%, #0f172a 100%)', // Simple, clean dark gradient
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundBlendMode: 'overlay'
-            }}
-        />
+            className="fixed top-0 left-0 w-full h-full -z-10 pointer-events-none transition-all duration-1000 ease-in-out bg-white"
+        >
+            {location.pathname === '/' && (
+                <div
+                    className="absolute inset-0 opacity-80 pointer-events-none bg-cover bg-center"
+                    style={{
+                        backgroundImage: `url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop')`
+                    }}
+                />
+            )}
+        </div>
     );
 };
 

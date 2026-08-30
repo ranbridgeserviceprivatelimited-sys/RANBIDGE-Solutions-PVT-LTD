@@ -76,14 +76,14 @@ const TechStack: React.FC = () => {
   return (
     <section className="py-32 relative overflow-hidden bg-transparent">
       {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-blue-500/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-5xl md:text-6xl font-black text-white font-heading uppercase tracking-tight">
+          <h2 className="text-5xl md:text-6xl font-black text-slate-900 font-heading uppercase tracking-tight">
             Our Tech Universe
           </h2>
-          <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+          <p className="text-slate-700 font-medium text-lg max-w-2xl mx-auto">
             An expansive ecosystem of technologies we leverage to build world-class digital solutions.
           </p>
         </div>
@@ -97,14 +97,14 @@ const TechStack: React.FC = () => {
               key={i}
               className={`tech-badge 
                 px-6 py-3 rounded-2xl
-                bg-slate-950/40 backdrop-blur-xl border ${tech.border.replace('/30', '/60')}
-                text-slate-200 font-bold text-sm md:text-base
-                shadow-2xl shadow-black/20
-                hover:scale-110 hover:border-white transition-all duration-300 cursor-pointer
+                bg-white border border-slate-200
+                text-slate-900 font-bold text-sm md:text-base
+                shadow-md hover:shadow-lg
+                hover:scale-110 hover:border-blue-500 transition-all duration-300 cursor-pointer
                 flex items-center justify-center whitespace-nowrap
               `}
             >
-              <div className={`w-2 h-2 rounded-full mr-3 animate-pulse ${tech.dot}`} />
+              <div className={`w-2 h-2 rounded-full mr-3 animate-pulse ${tech.name === 'GitHub' ? 'bg-slate-900' : tech.dot}`} />
               {tech.name}
             </div>
           ))}

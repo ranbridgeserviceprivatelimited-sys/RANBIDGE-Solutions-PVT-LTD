@@ -111,25 +111,25 @@ const Hero: React.FC = () => {
     <section
       ref={heroRef}
       id="home"
-      className="relative min-h-screen flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32 lg:pt-36 overflow-hidden text-white"
+      className="relative min-h-screen flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32 lg:pt-36 overflow-hidden text-slate-900"
     >
       {/* Glow background */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute -top-16 sm:-top-24 md:-top-32 -left-16 sm:-left-24 md:-left-32 w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 bg-blue-600/30 rounded-full blur-[80px] sm:blur-[100px] md:blur-[140px]" />
-        <div className="absolute bottom-0 right-0 w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 bg-indigo-600/30 rounded-full blur-[80px] sm:blur-[100px] md:blur-[140px]" />
+        <div className="absolute -top-16 sm:-top-24 md:-top-32 -left-16 sm:-left-24 md:-left-32 w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 bg-blue-500/15 rounded-full blur-[80px] sm:blur-[100px] md:blur-[140px]" />
+        <div className="absolute bottom-0 right-0 w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 bg-indigo-500/15 rounded-full blur-[80px] sm:blur-[100px] md:blur-[140px]" />
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6">
         <h1
           ref={titleRef}
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight leading-tight"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight leading-tight text-white drop-shadow-[0_4px_20px_rgba(0,0,0,0.9)]"
         >
           {COMPANY_NAME}
         </h1>
 
         <p
           ref={subtitleRef}
-          className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl lg:text-2xl text-slate-300 max-w-2xl mx-auto leading-relaxed"
+          className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl lg:text-2xl text-slate-100 font-semibold max-w-2xl mx-auto leading-relaxed drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]"
         >
           {TAGLINE}
         </p>
@@ -141,13 +141,13 @@ const Hero: React.FC = () => {
           <Link
             to="/about"
             className="px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold
-              bg-gradient-to-r from-blue-500 to-indigo-500
+              bg-gradient-to-r from-blue-600 to-indigo-600 text-white
               shadow-lg shadow-blue-500/30
               hover:shadow-indigo-500/40 hover:shadow-2xl
               hover:scale-105 hover:-translate-y-1
               transition-all duration-300 ease-out
               flex items-center justify-center gap-2 text-sm sm:text-base
-              hover:from-blue-600 hover:to-indigo-600
+              hover:from-blue-700 hover:to-indigo-700
               active:scale-95"
           >
             Get Started
@@ -157,16 +157,16 @@ const Hero: React.FC = () => {
           <Link
             to="/services"
             className="px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold
-              border border-white/30 bg-white/10 backdrop-blur-md
-              hover:bg-white/20 transition-all text-sm sm:text-base flex items-center justify-center"
+              border border-slate-300 bg-white text-slate-800 shadow-md
+              hover:bg-slate-50 transition-all text-sm sm:text-base flex items-center justify-center"
           >
             Our Services
           </Link>
         </div>
       </div>
 
-      <div className="absolute bottom-8 sm:bottom-10 left-1/2 -translate-x-1/2 opacity-60">
-        <ChevronDown size={20} className="sm:size-8" />
+      <div className="absolute bottom-8 sm:bottom-10 left-1/2 -translate-x-1/2 opacity-60 text-slate-600">
+        <ChevronDown size={20} className="sm:size-8 animate-bounce" />
       </div>
     </section>
   );

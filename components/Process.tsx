@@ -49,7 +49,7 @@ const Process: React.FC = () => {
   return (
     <section ref={sectionRef} id="process" className="py-32 relative bg-transparent overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-5xl font-black text-center mb-24 text-white font-heading uppercase tracking-tight">
+        <h2 className="text-5xl font-black text-center mb-24 text-slate-900 font-heading uppercase tracking-tight">
           Development Roadmap
         </h2>
 
@@ -93,15 +93,15 @@ const Process: React.FC = () => {
                 className="flex flex-col items-center text-center w-56 group cursor-pointer relative z-10"
               >
                 {/* Node Dot */}
-                <div className="w-10 h-10 rounded-full bg-slate-900 border-4 border-slate-800 mb-8 flex items-center justify-center text-blue-500 group-hover:border-blue-500 group-hover:bg-blue-600 transition-all duration-300">
-                  <div className="w-2 h-2 rounded-full bg-white animate-ping" />
+                <div className="w-10 h-10 rounded-full bg-white border-4 border-slate-300 mb-8 flex items-center justify-center text-blue-600 group-hover:border-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shadow-md">
+                  <div className="w-2 h-2 rounded-full bg-blue-600 group-hover:bg-white animate-ping" />
                 </div>
 
                 {/* Content Card */}
-                <div className="p-6 rounded-3xl bg-slate-900/60 backdrop-blur-xl border border-slate-800 group-hover:border-blue-500/50 shadow-2xl transition-all duration-300">
-                  <div className="text-blue-500 mb-4 flex justify-center">{step.icon}</div>
-                  <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
-                  <p className="text-sm text-slate-400 leading-relaxed font-medium">{step.desc}</p>
+                <div className="p-6 rounded-3xl bg-white border border-slate-200 group-hover:border-blue-500/50 shadow-lg shadow-slate-200/50 transition-all duration-300">
+                  <div className="text-blue-600 mb-4 flex justify-center">{step.icon}</div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-2">{step.title}</h3>
+                  <p className="text-sm text-slate-600 leading-relaxed font-medium">{step.desc}</p>
                 </div>
               </div>
             ))}
@@ -109,15 +109,15 @@ const Process: React.FC = () => {
         </div>
 
         {/* Mobile Roadmap */}
-        <div className="lg:hidden space-y-10 pl-8 border-l-2 border-slate-800 border-dashed ml-4">
+        <div className="lg:hidden space-y-10 pl-8 border-l-2 border-slate-300 border-dashed ml-4">
           {PROCESS_STEPS.map((step, i) => (
             <div key={i} className="relative">
-              <div className="absolute -left-[53px] top-0 w-10 h-10 rounded-full bg-slate-900 border-4 border-slate-800 flex items-center justify-center text-blue-500">
+              <div className="absolute -left-[53px] top-0 w-10 h-10 rounded-full bg-white border-4 border-slate-300 flex items-center justify-center text-blue-600 shadow-md">
                 {step.icon}
               </div>
-              <div className="p-6 rounded-2xl bg-slate-900/40 border border-slate-800">
-                <h3 className="text-lg font-bold text-white mb-1">{step.title}</h3>
-                <p className="text-slate-400 text-sm leading-relaxed">{step.desc}</p>
+              <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-md">
+                <h3 className="text-lg font-bold text-slate-900 mb-1">{step.title}</h3>
+                <p className="text-slate-600 text-sm leading-relaxed">{step.desc}</p>
               </div>
             </div>
           ))}

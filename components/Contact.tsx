@@ -112,14 +112,14 @@ const Contact: React.FC = () => {
           data-logo="true"
           className="max-w-3xl mx-auto text-center space-y-6"
         >
-          <h2 className="text-blue-600 uppercase tracking-wider text-sm font-semibold">
+          <h2 className="text-blue-600 uppercase tracking-wider text-sm font-bold">
             Contact Us
           </h2>
-          <h3 className="text-4xl md:text-5xl font-extrabold text-white">
+          <h3 className="text-4xl md:text-5xl font-extrabold text-slate-900">
             Let’s Build Something
             <span className="text-blue-600"> Meaningful Together</span>
           </h3>
-          <p className="text-lg text-slate-300 leading-relaxed">
+          <p className="text-lg text-slate-700 font-medium leading-relaxed">
             Reach out to discuss internships, MoUs, institutional collaborations,
             or custom digital solutions.
           </p>
@@ -135,10 +135,10 @@ const Contact: React.FC = () => {
             <div
               data-cursor
               data-logo="false"
-              className="group flex items-start gap-5 p-8 rounded-3xl bg-slate-900/50 backdrop-blur border border-slate-700
-                         hover:shadow-2xl hover:-translate-y-1 transition-all"
+              className="group flex items-start gap-5 p-8 rounded-3xl bg-white border border-slate-200 shadow-lg shadow-slate-200/50
+                         hover:shadow-xl hover:-translate-y-1 transition-all"
             >
-              <div className="bg-blue-900/30 text-blue-400 group-hover:bg-blue-600 group-hover:text-white transition-all rounded-2xl p-4">
+              <div className="bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all rounded-2xl p-4">
                 <Mail size={26} />
               </div>
               <div>
@@ -147,7 +147,7 @@ const Contact: React.FC = () => {
                 </p>
                 <a
                   href="mailto:ranbidgesolutionspvtltd@gmail.com"
-                  className="text-lg font-bold text-white hover:text-blue-600 transition-colors"
+                  className="text-lg font-bold text-slate-900 hover:text-blue-600 transition-colors"
                 >
                   ranbidgesolutionspvtltd@gmail.com
                 </a>
@@ -158,10 +158,10 @@ const Contact: React.FC = () => {
             <div
               data-cursor
               data-logo="false"
-              className="group flex items-start gap-5 p-8 rounded-3xl bg-slate-900/50 backdrop-blur border border-slate-700
-                         hover:shadow-2xl hover:-translate-y-1 transition-all"
+              className="group flex items-start gap-5 p-8 rounded-3xl bg-white border border-slate-200 shadow-lg shadow-slate-200/50
+                         hover:shadow-xl hover:-translate-y-1 transition-all"
             >
-              <div className="bg-blue-900/30 text-blue-400 group-hover:bg-blue-600 group-hover:text-white transition-all rounded-2xl p-4">
+              <div className="bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all rounded-2xl p-4">
                 <Phone size={26} />
               </div>
               <div>
@@ -170,7 +170,7 @@ const Contact: React.FC = () => {
                 </p>
                 <a
                   href="tel:+918247392437"
-                  className="text-lg font-bold text-white hover:text-blue-600 transition-colors"
+                  className="text-lg font-bold text-slate-900 hover:text-blue-600 transition-colors"
                 >
                   +91 82473 92437
                 </a>
@@ -181,17 +181,17 @@ const Contact: React.FC = () => {
             <div
               data-cursor
               data-logo="false"
-              className="group flex items-start gap-5 p-8 rounded-3xl bg-slate-900/50 backdrop-blur border border-slate-700
-                         hover:shadow-2xl hover:-translate-y-1 transition-all"
+              className="group flex items-start gap-5 p-8 rounded-3xl bg-white border border-slate-200 shadow-lg shadow-slate-200/50
+                         hover:shadow-xl hover:-translate-y-1 transition-all"
             >
-              <div className="bg-blue-900/30 text-blue-400 group-hover:bg-blue-600 group-hover:text-white transition-all rounded-2xl p-4">
+              <div className="bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all rounded-2xl p-4">
                 <MapPin size={26} />
               </div>
               <div>
                 <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">
                   Office Address
                 </p>
-                <p className="text-lg font-bold text-white">
+                <p className="text-lg font-bold text-slate-900">
                   Opposite to RTA Office, Narasaraopet,
                   <br />
                   Palnadu District, Andhra Pradesh 522601
@@ -207,7 +207,7 @@ const Contact: React.FC = () => {
             data-logo="true"
             className="
               p-12 rounded-3xl
-              bg-gradient-to-br from-slate-900 to-slate-800
+              bg-gradient-to-br from-blue-600 to-indigo-700
               text-white
               shadow-2xl
               hover:scale-[1.02]
@@ -218,12 +218,12 @@ const Contact: React.FC = () => {
               Let’s Talk About Your Idea
             </h4>
 
-            <p className="text-slate-300 leading-relaxed mb-8">
+            <p className="text-blue-100 leading-relaxed mb-8">
               Whether you’re planning internships, college collaborations,
               or a premium website — we’re here to help you shape it.
             </p>
 
-            <ul className="space-y-3 mb-10">
+            <ul className="space-y-3 mb-10 text-blue-50">
               <li>• Looking to sign an MoU with your institution?</li>
               <li>• Need industry-aligned internships?</li>
               <li>• Want a professional digital presence?</li>
@@ -232,8 +232,8 @@ const Contact: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="mailto:ranbidgesolutionspvtltd@gmail.com"
-                className="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700
-                           text-white font-semibold text-center transition"
+                className="px-6 py-3 rounded-xl bg-white text-blue-700 hover:bg-slate-50
+                           font-semibold text-center transition"
               >
                 Start a Conversation
               </a>
@@ -243,13 +243,13 @@ const Contact: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 rounded-xl bg-white/10 hover:bg-white/20
-                           text-white font-semibold text-center transition"
+                           text-white font-semibold text-center transition border border-white/20"
               >
                 Chat on WhatsApp
               </a>
             </div>
 
-            <p className="mt-10 text-sm text-slate-400">
+            <p className="mt-10 text-sm text-blue-200">
               {COMPANY_NAME}
             </p>
           </div>
@@ -258,22 +258,22 @@ const Contact: React.FC = () => {
         {/* 🔹 FAQ SECTION */}
         <div ref={faqRef} className="max-w-4xl mx-auto space-y-12">
           <div className="text-center">
-            <h4 className="text-3xl font-bold text-white mb-4">Frequently Asked Questions</h4>
-            <p className="text-slate-400">Common questions about our services and process.</p>
+            <h4 className="text-3xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h4>
+            <p className="text-slate-700 font-medium">Common questions about our services and process.</p>
           </div>
 
           <div className="space-y-4">
             {FAQ_DATA.map((faq, idx) => (
               <div
                 key={idx}
-                className="bg-slate-900/50 border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-700 transition-all"
+                className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all"
               >
                 <button
                   onClick={() => setActiveFaq(activeFaq === idx ? null : idx)}
                   className="w-full p-6 flex items-center justify-between text-left"
                 >
-                  <span className="text-lg font-bold text-white">{faq.question}</span>
-                  <span className="text-blue-500 bg-blue-500/10 p-1 rounded-lg">
+                  <span className="text-lg font-bold text-slate-900">{faq.question}</span>
+                  <span className="text-blue-600 bg-blue-50 p-1 rounded-lg">
                     {activeFaq === idx ? <Minus size={20} /> : <Plus size={20} />}
                   </span>
                 </button>
@@ -281,7 +281,7 @@ const Contact: React.FC = () => {
                 <div
                   className={`px-6 overflow-hidden transition-all duration-300 ease-in-out ${activeFaq === idx ? "max-h-40 pb-6 opacity-100" : "max-h-0 opacity-0"}`}
                 >
-                  <p className="text-slate-400 leading-relaxed">
+                  <p className="text-slate-600 leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>

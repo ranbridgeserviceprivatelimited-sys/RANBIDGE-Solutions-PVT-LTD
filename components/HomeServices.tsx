@@ -47,10 +47,10 @@ const HomeServices: React.FC = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 mb-4">
             Our Services
           </h2>
-          <p className="text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl text-slate-700 font-medium max-w-3xl mx-auto leading-relaxed">
             Comprehensive solutions to help your business thrive in the digital age
           </p>
         </div>
@@ -60,28 +60,28 @@ const HomeServices: React.FC = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-slate-900/50 backdrop-blur-md p-8 rounded-2xl border border-slate-700 hover:border-blue-500/50 transition-all duration-300 group hover:transform hover:scale-105"
+              className="bg-white p-8 rounded-2xl border border-slate-200 shadow-lg shadow-slate-200/50 hover:border-blue-500/50 transition-all duration-300 group hover:transform hover:scale-105"
             >
               {/* Icon */}
-              <div className="w-16 h-16 bg-blue-600/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600/30 transition-colors">
-                <div className="text-blue-400">
+              <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
+                <div className="text-blue-600 group-hover:text-white transition-colors">
                   {React.cloneElement(service.icon, { size: 24, className: "md:size-8" })}
                 </div>
               </div>
 
               {/* Content */}
-              <h3 className="text-xl font-bold text-white mb-3">
+              <h3 className="text-xl font-bold text-slate-900 mb-3">
                 {service.title}
               </h3>
-              <p className="text-slate-300 leading-relaxed mb-6">
+              <p className="text-slate-600 leading-relaxed mb-6">
                 {service.description}
               </p>
 
               {/* Features List */}
               <div className="space-y-2">
                 {service.features.map((feature, featureIndex) => (
-                  <div key={featureIndex} className="flex items-center text-sm text-slate-400">
-                    <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-3"></div>
+                  <div key={featureIndex} className="flex items-center text-sm text-slate-600">
+                    <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mr-3"></div>
                     {feature}
                   </div>
                 ))}
@@ -92,11 +92,11 @@ const HomeServices: React.FC = () => {
 
         {/* CTA Section */}
         <div className="mt-16 text-center">
-          <div className="bg-slate-900/50 backdrop-blur-md p-12 rounded-3xl border border-slate-700 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-4">
+          <div className="bg-white p-12 rounded-3xl border border-slate-200 shadow-lg shadow-slate-200/50 max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold text-slate-900 mb-4">
               Need a Custom Solution?
             </h3>
-            <p className="text-slate-300 mb-8">
+            <p className="text-slate-600 mb-8">
               We tailor our services to meet your specific business needs and goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -108,7 +108,7 @@ const HomeServices: React.FC = () => {
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-3 px-8 py-4 border border-white/30 bg-white/10 backdrop-blur-md text-white font-semibold rounded-xl hover:bg-white/20 transition-colors"
+                className="inline-flex items-center gap-3 px-8 py-4 border border-slate-300 bg-slate-100 text-slate-800 font-semibold rounded-xl hover:bg-slate-200 transition-colors"
               >
                 Get Quote
               </Link>

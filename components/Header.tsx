@@ -102,14 +102,16 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-6 left-0 right-0 z-50 transition-transform duration-300 ${isVisible ? "translate-y-0" : "-translate-y-full"
+      className={`fixed top-4 left-0 right-0 z-50 transition-transform duration-300 ${isVisible ? "translate-y-0" : "-translate-y-full"
         }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        
+        {/* 🔝 SINGLE ROW HEADER: SOCIAL (LEFT) | NAVBAR (CENTER) | CONTACT (RIGHT) */}
+        <div className="flex items-center justify-between gap-2 md:gap-4">
 
-        {/* 🔝 SOCIAL + CONTACT */}
-        <div ref={iconsRef} className="grid grid-cols-3 items-center px-4 md:px-28 mb-4">
-          <div className="flex gap-2 md:gap-3">
+          {/* 🔹 SOCIAL MEDIA ICONS (LEFT) */}
+          <div ref={iconsRef} className="flex items-center gap-1.5 md:gap-2 shrink-0">
             <a
               href="https://www.facebook.com/profile.php?id=61578597456959"
               target="_blank"
@@ -119,7 +121,7 @@ const Header: React.FC = () => {
               className={`p-1.5 md:p-2 rounded-full transition-colors ${isOnHero ? "bg-blue-600 text-white" : "bg-slate-800 text-blue-400 hover:bg-slate-700"
                 }`}
             >
-              <Facebook size={16} className="md:size-6" />
+              <Facebook size={16} className="md:size-5" />
             </a>
 
             <a
@@ -131,7 +133,7 @@ const Header: React.FC = () => {
               className={`p-1.5 md:p-2 rounded-full transition-colors ${isOnHero ? "bg-blue-600 text-white" : "bg-slate-800 text-blue-400 hover:bg-slate-700"
                 }`}
             >
-              <Linkedin size={16} className="md:size-6" />
+              <Linkedin size={16} className="md:size-5" />
             </a>
 
             <a
@@ -143,7 +145,7 @@ const Header: React.FC = () => {
               className={`p-1.5 md:p-2 rounded-full transition-colors ${isOnHero ? "bg-blue-600 text-white" : "bg-slate-800 text-blue-400 hover:bg-slate-700"
                 }`}
             >
-              <Instagram size={16} className="md:size-6" />
+              <Instagram size={16} className="md:size-5" />
             </a>
 
             <a
@@ -155,7 +157,7 @@ const Header: React.FC = () => {
               className={`p-1.5 md:p-2 rounded-full transition-colors ${isOnHero ? "bg-blue-600 text-white" : "bg-slate-800 text-blue-400 hover:bg-slate-700"
                 }`}
             >
-              <Twitter size={16} className="md:size-6" />
+              <Twitter size={16} className="md:size-5" />
             </a>
 
             <a
@@ -167,110 +169,110 @@ const Header: React.FC = () => {
               className={`p-1.5 md:p-2 rounded-full transition-colors ${isOnHero ? "bg-blue-600 text-white" : "bg-slate-800 text-blue-400 hover:bg-slate-700"
                 }`}
             >
-              <Youtube size={16} className="md:size-6" />
+              <Youtube size={16} className="md:size-5" />
             </a>
           </div>
 
-          <div />
+          {/* 🔹 CENTER NAVBAR PILL */}
+          <div ref={navRef} className="bg-slate-900/90 backdrop-blur-md rounded-full shadow-xl shadow-blue-950/20 px-3 sm:px-5 py-2 border border-slate-700/60 shrink-0">
+            <div ref={menuItemsRef} className="flex items-center justify-between lg:justify-center gap-2 sm:gap-3 lg:gap-4">
 
-          <div className="flex justify-end">
+              {/* DESKTOP LEFT BUTTONS */}
+              <nav className="hidden lg:flex items-center gap-1 sm:gap-2">
+                {[
+                  { path: "/", label: "Home" },
+                  { path: "/about", label: "About" },
+                  { path: "/services", label: "Services" }
+                ].map((item, i) => {
+                  const isActive = location.pathname === item.path;
+                  return (
+                    <Link
+                      key={i}
+                      to={item.path}
+                      className={`nav-link relative px-3 py-2 rounded-xl text-xs lg:text-sm font-semibold transition-all duration-300 ${
+                        isActive
+                          ? "text-white font-bold bg-blue-500/20"
+                          : "text-slate-300 hover:text-white hover:bg-slate-800/60"
+                      }`}
+                    >
+                      {item.label}
+                      <span
+                        className={`absolute bottom-0.5 left-2 right-2 h-[2.5px] bg-blue-500 rounded-full shadow-[0_0_8px_rgba(59,130,246,0.8)] transition-all duration-300 ${
+                          isActive ? "opacity-100 scale-x-100" : "opacity-0 scale-x-0"
+                        }`}
+                      />
+                    </Link>
+                  );
+                })}
+              </nav>
+
+              {/* LOGO - Center */}
+              <div className="flex justify-center items-center px-1">
+                <Link to="/" className="flex items-center">
+                  <img
+                    ref={logoRef}
+                    src="https://ik.imagekit.io/lg14qfjkg/RANBIDGE%20SOLUTIONS%20PRIVATE%20LIMITED.png"
+                    alt="Ranbidge Logo"
+                    className="h-8 lg:h-9 object-contain brightness-0 invert hover:scale-105 transition-transform"
+                  />
+                </Link>
+              </div>
+
+              {/* DESKTOP RIGHT BUTTONS */}
+              <nav className="hidden lg:flex items-center gap-1 sm:gap-2">
+                {[
+                  { path: "/domains", label: "Domains" },
+                  { path: "/internship", label: "Internship" },
+                  { path: "/contact", label: "Contact" }
+                ].map((item, i) => {
+                  const isActive = location.pathname === item.path;
+                  return (
+                    <Link
+                      key={i}
+                      to={item.path}
+                      className={`nav-link relative px-3 py-2 rounded-xl text-xs lg:text-sm font-semibold transition-all duration-300 ${
+                        isActive
+                          ? "text-white font-bold bg-blue-500/20"
+                          : "text-slate-300 hover:text-white hover:bg-slate-800/60"
+                      }`}
+                    >
+                      {item.label}
+                      <span
+                        className={`absolute bottom-0.5 left-2 right-2 h-[2.5px] bg-blue-500 rounded-full shadow-[0_0_8px_rgba(59,130,246,0.8)] transition-all duration-300 ${
+                          isActive ? "opacity-100 scale-x-100" : "opacity-0 scale-x-0"
+                        }`}
+                      />
+                    </Link>
+                  );
+                })}
+              </nav>
+
+              {/* MOBILE MENU BUTTON */}
+              <div className="lg:hidden flex items-center">
+                <button
+                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                  className={`p-1.5 rounded-full transition-colors ${isOnHero ? "bg-blue-600 text-white" : "bg-slate-800 text-blue-400 hover:bg-slate-700"}`}
+                >
+                  {isMobileMenuOpen ? <X size={18} /> : <Menu size={18} />}
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+          {/* 🔹 CONTACT NUMBER (RIGHT) */}
+          <div className="flex justify-end shrink-0">
             <a
               href="tel:+918247392437"
-              className={`flex items-center gap-1.5 md:gap-2 px-2 md:px-4 py-1.5 md:py-2 rounded-full text-xs md:text-sm transition-colors ${isOnHero ? "bg-blue-600 text-white" : "bg-slate-800 text-blue-400 hover:bg-slate-700"
+              className={`flex items-center gap-1.5 md:gap-2 px-2.5 md:px-4 py-2 rounded-full text-xs md:text-sm font-medium transition-colors shadow-md ${isOnHero ? "bg-blue-600 text-white hover:bg-blue-700" : "bg-slate-800 text-blue-400 hover:bg-slate-700"
                 }`}
             >
-              <Phone size={16} className="md:size-6" />
+              <Phone size={15} className="md:size-4" />
               <span className="hidden sm:inline">+91 82473 92437</span>
               <span className="sm:hidden">Call</span>
             </a>
           </div>
-        </div>
 
-        {/* 🔽 NAVBAR */}
-        <div ref={navRef} className="bg-slate-900/85 backdrop-blur-md rounded-full shadow-xl shadow-blue-950/20 px-4 sm:px-6 py-2.5 border border-slate-700/60 w-full lg:w-fit lg:mx-auto">
-          <div ref={menuItemsRef} className="flex items-center justify-between lg:justify-center gap-3 sm:gap-4 lg:gap-5 w-full">
-
-            {/* DESKTOP LEFT BUTTONS */}
-            <nav className="hidden lg:flex items-center gap-2 sm:gap-3 lg:gap-4">
-              {[
-                { path: "/", label: "Home" },
-                { path: "/about", label: "About" },
-                { path: "/services", label: "Services" }
-              ].map((item, i) => {
-                const isActive = location.pathname === item.path;
-                return (
-                  <Link
-                    key={i}
-                    to={item.path}
-                    className={`nav-link relative px-4 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 ${
-                      isActive
-                        ? "text-white font-bold bg-blue-500/10"
-                        : "text-slate-300 hover:text-white hover:bg-slate-800/60"
-                    }`}
-                  >
-                    {item.label}
-                    <span
-                      className={`absolute bottom-0.5 left-3 right-3 h-[3px] bg-blue-500 rounded-full shadow-[0_0_8px_rgba(59,130,246,0.8)] transition-all duration-300 ${
-                        isActive ? "opacity-100 scale-x-100" : "opacity-0 scale-x-0"
-                      }`}
-                    />
-                  </Link>
-                );
-              })}
-            </nav>
-
-            {/* LOGO - Center */}
-            <div className="flex justify-center items-center px-1 sm:px-2">
-              <Link to="/" className="flex items-center">
-                <img
-                  ref={logoRef}
-                  src="https://ik.imagekit.io/lg14qfjkg/RANBIDGE%20SOLUTIONS%20PRIVATE%20LIMITED.png"
-                  alt="Ranbidge Logo"
-                  className="h-10 lg:h-11 object-contain brightness-0 invert hover:scale-105 transition-transform"
-                />
-              </Link>
-            </div>
-
-            {/* DESKTOP RIGHT BUTTONS */}
-            <nav className="hidden lg:flex items-center gap-2 sm:gap-3 lg:gap-4">
-              {[
-                { path: "/domains", label: "Domains" },
-                { path: "/internship", label: "Internship" },
-                { path: "/contact", label: "Contact" }
-              ].map((item, i) => {
-                const isActive = location.pathname === item.path;
-                return (
-                  <Link
-                    key={i}
-                    to={item.path}
-                    className={`nav-link relative px-4 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 ${
-                      isActive
-                        ? "text-white font-bold bg-blue-500/10"
-                        : "text-slate-300 hover:text-white hover:bg-slate-800/60"
-                    }`}
-                  >
-                    {item.label}
-                    <span
-                      className={`absolute bottom-0.5 left-3 right-3 h-[3px] bg-blue-500 rounded-full shadow-[0_0_8px_rgba(59,130,246,0.8)] transition-all duration-300 ${
-                        isActive ? "opacity-100 scale-x-100" : "opacity-0 scale-x-0"
-                      }`}
-                    />
-                  </Link>
-                );
-              })}
-            </nav>
-
-            {/* MOBILE MENU BUTTON */}
-            <div className="lg:hidden flex items-center">
-              <button
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className={`p-2 rounded-full transition-colors ${isOnHero ? "bg-blue-600 text-white" : "bg-slate-800 text-blue-400 hover:bg-slate-700"}`}
-              >
-                {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
-              </button>
-            </div>
-
-          </div>
         </div>
 
         {/* MOBILE MENU */}

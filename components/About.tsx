@@ -90,22 +90,22 @@ const About: React.FC = () => {
           ref={storyRef}
           className="max-w-4xl mx-auto text-center space-y-6"
         >
-          <h2 className="text-blue-600 uppercase tracking-wider text-sm font-semibold">
+          <h2 className="text-blue-600 uppercase tracking-wider text-sm font-bold">
             About Ranbidge
           </h2>
 
-          <h3 className="text-4xl md:text-5xl font-extrabold text-white">
+          <h3 className="text-4xl md:text-5xl font-extrabold text-slate-900">
             Bridging Education with
             <span className="text-blue-600"> Industry Reality</span>
           </h3>
 
-          <p className="text-lg text-slate-300 leading-relaxed">
+          <p className="text-lg text-slate-700 leading-relaxed">
             <strong>RANBIDGE Solutions Private Limited</strong> is built with a
             single purpose — to close the gap between academic learning and
             real-world industry expectations.
           </p>
 
-          <p className="text-lg text-slate-300 leading-relaxed">
+          <p className="text-lg text-slate-700 leading-relaxed">
             We partner with colleges, students, and organizations to deliver
             structured programs, live internships, and industry-aligned skill
             development.
@@ -137,19 +137,19 @@ const About: React.FC = () => {
             <div
               key={i}
               className="
-                bg-slate-900/50 backdrop-blur border border-slate-700
+                bg-white border border-slate-200 shadow-lg shadow-slate-200/50
                 rounded-2xl p-8
-                hover:shadow-lg hover:-translate-y-1
+                hover:shadow-xl hover:-translate-y-1
                 transition-all duration-300
               "
             >
               <div className="w-12 h-12 mb-4 text-blue-600">
                 {item.icon}
               </div>
-              <h4 className="text-xl font-semibold text-white mb-2">
+              <h4 className="text-xl font-semibold text-slate-900 mb-2">
                 {item.title}
               </h4>
-              <p className="text-slate-300">
+              <p className="text-slate-600">
                 {item.desc}
               </p>
             </div>
@@ -161,12 +161,12 @@ const About: React.FC = () => {
           ref={visionRef}
           className="grid md:grid-cols-2 gap-12"
         >
-          <div className="bg-slate-900/50 backdrop-blur border border-slate-700 rounded-2xl p-12 shadow-sm">
+          <div className="bg-white border border-slate-200 rounded-2xl p-12 shadow-lg shadow-slate-200/50">
             <Eye className="w-10 h-10 text-blue-600 mb-4" />
-            <h4 className="text-2xl font-bold text-white mb-4">
+            <h4 className="text-2xl font-bold text-slate-900 mb-4">
               Our Vision
             </h4>
-            <div className="text-slate-300 leading-relaxed space-y-4">
+            <div className="text-slate-600 leading-relaxed space-y-4">
               <p>
                 To become a trusted national bridge between education and industry,
                 creating ethical, skilled, and future-ready professionals.
@@ -177,12 +177,12 @@ const About: React.FC = () => {
             </div>
           </div>
 
-          <div className="bg-slate-900/50 backdrop-blur border border-slate-700 rounded-2xl p-12 shadow-sm">
+          <div className="bg-white border border-slate-200 rounded-2xl p-12 shadow-lg shadow-slate-200/50">
             <Target className="w-10 h-10 text-blue-600 mb-4" />
-            <h4 className="text-2xl font-bold text-white mb-4">
+            <h4 className="text-2xl font-bold text-slate-900 mb-4">
               Our Mission
             </h4>
-            <div className="text-slate-300 leading-relaxed space-y-4">
+            <div className="text-slate-600 leading-relaxed space-y-4">
               <p>
                 To deliver practical learning experiences, real internships, and
                 structured growth pathways aligned with industry needs.
@@ -197,8 +197,8 @@ const About: React.FC = () => {
         {/* TEAM INTRODUCTION */}
         <div className="text-center space-y-12">
           <div className="space-y-4">
-            <h3 className="text-3xl font-bold text-white">Our Expert Team</h3>
-            <p className="text-lg text-slate-300 max-w-2xl mx-auto">
+            <h3 className="text-3xl font-bold text-slate-900">Our Expert Team</h3>
+            <p className="text-lg text-slate-700 max-w-2xl mx-auto font-medium">
               Meet the professionals behind <strong>RANBIDGE</strong> dedicated to delivering excellence.
             </p>
           </div>
@@ -223,11 +223,11 @@ const About: React.FC = () => {
               }
             ].map((member, i) => (
               <div key={i} className="group">
-                <div className="relative overflow-hidden rounded-2xl aspect-[4/5] mb-4 border border-slate-700 bg-slate-800 flex items-center justify-center">
-                  <User className="w-24 h-24 text-slate-500 group-hover:text-blue-400 transition-all duration-500" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent flex flex-col justify-end p-6">
+                <div className="relative overflow-hidden rounded-2xl aspect-[4/5] mb-4 border border-slate-200 bg-slate-100 flex items-center justify-center shadow-md">
+                  <User className="w-24 h-24 text-slate-400 group-hover:text-blue-600 transition-all duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 to-transparent flex flex-col justify-end p-6">
                     <h5 className="text-white font-bold">{member.name}</h5>
-                    <p className="text-blue-400 text-sm">{member.role}</p>
+                    <p className="text-blue-300 text-sm font-medium">{member.role}</p>
                   </div>
                 </div>
               </div>
