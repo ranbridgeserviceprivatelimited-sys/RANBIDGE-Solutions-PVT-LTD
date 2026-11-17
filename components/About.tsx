@@ -247,6 +247,7 @@ const About: React.FC = () => {
               {
                 name: "Poornima",
                 role: "Chief Marketing Officer",
+                image: "/cmo.jpg",
               },
               {
                 name: "R Nani Nayak",
