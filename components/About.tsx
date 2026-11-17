@@ -217,7 +217,7 @@ const About: React.FC = () => {
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {[
               {
-                name: "R.Gopinath Reddy",
+                name: "R Gopinath Reddy",
                 role: "CEO & Founder",
                 image: "/ceo.jpg",
               },
