@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Code, Database, Globe, Smartphone, Cloud, Shield } from "lucide-react";
+import { Code, Database, Globe, Smartphone, Cloud, Shield, Cpu } from "lucide-react";
 
 const HomeServices: React.FC = () => {
   const services = [
@@ -39,6 +39,12 @@ const HomeServices: React.FC = () => {
       title: "Cybersecurity",
       description: "Protect your business with comprehensive security solutions",
       features: ["Security Audits", "Penetration Testing", "Compliance", "Security Training"]
+    },
+    {
+      icon: <Cpu size={32} />,
+      title: "IOT & Robotics & Hardware Projects",
+      description: "Smart connected devices, embedded systems, robotic automation, and custom hardware prototyping",
+      features: ["Arduino / ESP32 / Raspberry Pi", "Sensors & Actuator Integration", "Robotics & Automation", "Embedded Systems & Prototyping"]
     }
   ];
 

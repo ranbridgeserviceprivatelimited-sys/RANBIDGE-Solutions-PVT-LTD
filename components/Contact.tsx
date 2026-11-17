@@ -24,6 +24,23 @@ const Contact: React.FC = () => {
   const faqRef = useRef<HTMLDivElement>(null);
 
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
+  const [formData, setFormData] = useState({
+    name: "",
+    contact: "",
+    projectType: "IoT & Smart Hardware (Arduino / ESP32 / Raspberry Pi)",
+    question: "",
+  });
+
+  const getWhatsappUrl = () => {
+    const text = `Hello Ranbidge Team, I have a project inquiry!\n\n• Name: ${formData.name || "Prospective Client"}\n• Contact Info: ${formData.contact || "Not provided"}\n• Project Type: ${formData.projectType}\n• Questions / What I want to build:\n${formData.question || "I want to discuss building a custom project with your team."}`;
+    return `https://wa.me/918247392437?text=${encodeURIComponent(text)}`;
+  };
+
+  const getMailtoUrl = () => {
+    const subject = `Project Inquiry: ${formData.projectType} - ${formData.name || "Client"}`;
+    const body = `Hello Ranbidge Team,\n\nI would like to inquire about building a project with your team:\n\n• Name: ${formData.name}\n• Contact: ${formData.contact}\n• Project Category: ${formData.projectType}\n\n• Project Details & Questions:\n${formData.question || "Please provide details regarding timeline, hardware/software stack, and quotation."}\n\nLooking forward to your guidance.`;
+    return `mailto:ranbidgesolutionspvtltd@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -200,57 +217,128 @@ const Contact: React.FC = () => {
             </div>
           </div>
 
-          {/* 💬 LET’S TALK */}
+          {/* 💬 PROJECT INQUIRY & LET’S TALK */}
           <div
             ref={talkRef}
             data-cursor
             data-logo="true"
             className="
-              p-12 rounded-3xl
-              bg-gradient-to-br from-blue-600 to-indigo-700
+              p-8 sm:p-10 rounded-3xl
+              bg-gradient-to-br from-blue-600 via-indigo-700 to-slate-900
               text-white
               shadow-2xl
-              hover:scale-[1.02]
+              hover:shadow-blue-500/20
               transition-all
             "
           >
-            <h4 className="text-3xl font-extrabold mb-4">
-              Let’s Talk About Your Idea
-            </h4>
+            <div className="mb-6">
+              <span className="px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase bg-blue-500/30 text-blue-200 border border-blue-400/30 mb-3 inline-block">
+                Project Development & Building
+              </span>
+              <h4 className="text-2xl sm:text-3xl font-extrabold mb-2 text-white">
+                Have a Project in Mind?
+              </h4>
+              <p className="text-blue-100 text-sm leading-relaxed">
+                Tell us what you want to build—from IoT & Robotics hardware to custom web and mobile applications—or ask your technical questions below.
+              </p>
+            </div>
 
-            <p className="text-blue-100 leading-relaxed mb-8">
-              Whether you’re planning internships, college collaborations,
-              or a premium website — we’re here to help you shape it.
-            </p>
+            <div className="space-y-4 mb-6">
+              <div>
+                <label className="block text-xs font-semibold text-blue-200 uppercase tracking-wider mb-1.5">
+                  Your Name
+                </label>
+                <input
+                  type="text"
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  placeholder="e.g. Rahul Sharma"
+                  className="w-full px-4 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white placeholder-blue-200/60 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 focus:bg-white/15 transition-all"
+                />
+              </div>
 
-            <ul className="space-y-3 mb-10 text-blue-50">
-              <li>• Looking to sign an MoU with your institution?</li>
-              <li>• Need industry-aligned internships?</li>
-              <li>• Want a professional digital presence?</li>
-            </ul>
+              <div>
+                <label className="block text-xs font-semibold text-blue-200 uppercase tracking-wider mb-1.5">
+                  Phone Number or Email
+                </label>
+                <input
+                  type="text"
+                  value={formData.contact}
+                  onChange={(e) => setFormData({ ...formData, contact: e.target.value })}
+                  placeholder="e.g. +91 98765 43210 or yourname@gmail.com"
+                  className="w-full px-4 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white placeholder-blue-200/60 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 focus:bg-white/15 transition-all"
+                />
+              </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+              <div>
+                <label className="block text-xs font-semibold text-blue-200 uppercase tracking-wider mb-1.5">
+                  What type of project are you building?
+                </label>
+                <select
+                  value={formData.projectType}
+                  onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
+                  className="w-full px-4 py-2.5 rounded-xl bg-slate-800 border border-white/20 text-white text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all cursor-pointer"
+                >
+                  <option value="IoT & Smart Hardware (Arduino / ESP32 / Raspberry Pi)">
+                    IoT & Smart Hardware (Arduino / ESP32 / Raspberry Pi)
+                  </option>
+                  <option value="Robotics & Autonomous Systems (ROS / OpenCV / Bots)">
+                    Robotics & Autonomous Systems (ROS / OpenCV / Bots)
+                  </option>
+                  <option value="Web Development & SaaS Applications (React / Node / Python)">
+                    Web Development & SaaS Applications (React / Node / Python)
+                  </option>
+                  <option value="Mobile App Development (Flutter / React Native)">
+                    Mobile App Development (Flutter / React Native)
+                  </option>
+                  <option value="Final-Year Academic / Capstone Project">
+                    Final-Year Academic / Capstone Project
+                  </option>
+                  <option value="Research Paper Writing & Prototype (IEEE / Scopus)">
+                    Research Paper Writing & Prototype (IEEE / Scopus)
+                  </option>
+                  <option value="Custom Business IT Solution">
+                    Custom Business IT Solution
+                  </option>
+                </select>
+              </div>
+
+              <div>
+                <label className="block text-xs font-semibold text-blue-200 uppercase tracking-wider mb-1.5">
+                  Questions & What You Want to Build
+                </label>
+                <textarea
+                  rows={3}
+                  value={formData.question}
+                  onChange={(e) => setFormData({ ...formData, question: e.target.value })}
+                  placeholder="Ask questions about components, sensor requirements, timeline, budget, or describe your project idea..."
+                  className="w-full px-4 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white placeholder-blue-200/60 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 focus:bg-white/15 transition-all resize-none"
+                />
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-3">
               <a
-                href="mailto:ranbidgesolutionspvtltd@gmail.com"
-                className="px-6 py-3 rounded-xl bg-white text-blue-700 hover:bg-slate-50
-                           font-semibold text-center transition"
+                href={getWhatsappUrl()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-green-500 hover:bg-green-600 text-white font-semibold text-sm transition-all shadow-md hover:scale-[1.02]"
               >
-                Start a Conversation
+                <MessageCircle size={18} />
+                Send via WhatsApp
               </a>
 
               <a
-                href="https://wa.me/918247392437"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 py-3 rounded-xl bg-white/10 hover:bg-white/20
-                           text-white font-semibold text-center transition border border-white/20"
+                href={getMailtoUrl()}
+                className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-white hover:bg-slate-100 text-slate-900 font-semibold text-sm transition-all shadow-md hover:scale-[1.02]"
               >
-                Chat on WhatsApp
+                <Mail size={18} />
+                Submit via Email
               </a>
             </div>
 
-            <p className="mt-10 text-sm text-blue-200">
-              {COMPANY_NAME}
+            <p className="mt-6 text-xs text-blue-200/80 text-center">
+              Our engineers typically review and reply to project inquiries within 24 hours.
             </p>
           </div>
         </div>
@@ -259,7 +347,7 @@ const Contact: React.FC = () => {
         <div ref={faqRef} className="max-w-4xl mx-auto space-y-12">
           <div className="text-center">
             <h4 className="text-3xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h4>
-            <p className="text-slate-700 font-medium">Common questions about our services and process.</p>
+            <p className="text-slate-700 font-medium">Common questions about our services, building projects, IoT, and process.</p>
           </div>
 
           <div className="space-y-4">
@@ -279,7 +367,7 @@ const Contact: React.FC = () => {
                 </button>
 
                 <div
-                  className={`px-6 overflow-hidden transition-all duration-300 ease-in-out ${activeFaq === idx ? "max-h-40 pb-6 opacity-100" : "max-h-0 opacity-0"}`}
+                  className={`px-6 overflow-hidden transition-all duration-300 ease-in-out ${activeFaq === idx ? "max-h-96 pb-6 opacity-100" : "max-h-0 opacity-0"}`}
                 >
                   <p className="text-slate-600 leading-relaxed">
                     {faq.answer}

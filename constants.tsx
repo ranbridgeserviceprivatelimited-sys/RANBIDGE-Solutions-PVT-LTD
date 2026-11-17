@@ -67,6 +67,11 @@ export const SERVICES: Service[] = [
     title: "Career Guidance",
     description: "Personalized career counseling, resume building, interview preparation, and placement assistance to help you land your dream job.",
     icon: <Compass className="w-6 h-6" />
+  },
+  {
+    title: "IOT & Robotics & Hardware Projects",
+    description: "End-to-end development and implementation of smart IoT devices, robotics automation, embedded systems, and hardware prototypes.",
+    icon: <Cpu className="w-6 h-6" />
   }
 ];
 
@@ -209,6 +214,64 @@ export const DOMAINS: Domain[] = [
         image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80"
       }
     ]
+  },
+  {
+    id: "iot",
+    name: "IoT & Embedded Systems",
+    description: "Designing smart connected devices, sensor networks, and microcontroller-based automated hardware systems.",
+    topics: ["Arduino & ESP32", "Raspberry Pi & Linux", "Sensors & Actuator Integration", "MQTT & Cloud IoT Architecture"],
+    projects: [
+      {
+        title: "Smart Home Automation System",
+        description: "IoT-enabled ambient monitoring, smart appliance switching, and energy monitoring via mobile application.",
+        tags: ["ESP32", "MQTT", "Node.js", "Flutter"],
+        link: "#",
+        image: "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        title: "Industrial IoT Telemetry Hub",
+        description: "Real-time sensor mesh, temperature/vibration monitoring, and predictive failure analytics dashboard.",
+        tags: ["Raspberry Pi", "Python", "AWS IoT", "Grafana"],
+        link: "#",
+        image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        title: "Smart Agriculture & Irrigation",
+        description: "Automated soil moisture sensing, automated water valves, and weather-adaptive scheduling system.",
+        tags: ["Arduino", "Sensors", "Blynk", "C++"],
+        link: "#",
+        image: "https://images.unsplash.com/photo-1586771107445-d3ca888129ff?auto=format&fit=crop&w=800&q=80"
+      }
+    ]
+  },
+  {
+    id: "robotics",
+    name: "Robotics & Automation",
+    description: "Building autonomous mobile robots, robotic kinematics, industrial automation, and computer vision integration.",
+    topics: ["ROS (Robot Operating System)", "Robotic Arm Kinematics", "Autonomous Navigation (SLAM)", "Computer Vision (OpenCV)"],
+    projects: [
+      {
+        title: "Autonomous Obstacle-Avoidance Rover",
+        description: "Self-navigating mobile rover equipped with ultrasonic sensors, LiDAR mapping, and path planning.",
+        tags: ["ROS", "Python", "LiDAR", "Arduino"],
+        link: "#",
+        image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        title: "6-DOF Pick & Place Robotic Arm",
+        description: "Multi-axis servo-driven robotic manipulator with inverse kinematics and camera vision inspection.",
+        tags: ["Inverse Kinematics", "OpenCV", "Servo Motors", "C++"],
+        link: "#",
+        image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        title: "AI Vision Surveillance Drone",
+        description: "Autonomous quad-copter drone with real-time human and object detection with telemetry streaming.",
+        tags: ["Drone", "YOLOv8", "Raspberry Pi", "OpenCV"],
+        link: "#",
+        image: "https://images.unsplash.com/photo-1527977966376-1c8408f9f108?auto=format&fit=crop&w=800&q=80"
+      }
+    ]
   }
 ];
 
@@ -319,19 +382,35 @@ export const PROCESS_STEPS = [
 // FAQ DATA
 export const FAQ_DATA = [
   {
+    question: "What types of software and web projects do you build?",
+    answer: "We build modern end-to-end web applications (React, Next.js, Node.js, Python), high-performance mobile apps (Flutter, React Native), SaaS platforms, e-commerce solutions, and custom enterprise tools tailored to specific business workflows."
+  },
+  {
+    question: "Do you develop IoT, Robotics, and Hardware projects?",
+    answer: "Yes! We specialize in hardware and IoT development including Arduino, ESP32, Raspberry Pi, sensor integration, robotic automation (arms, rovers, drones), embedded systems, and prototype manufacturing for both commercial and academic needs."
+  },
+  {
+    question: "Can you build academic final-year and research-level projects?",
+    answer: "Absolutely. We provide end-to-end guidance and complete project building for B.Tech, M.Tech, and research scholars—including source code, hardware circuit setup, project reports, PPTs, and IEEE/Scopus publication support."
+  },
+  {
+    question: "How does the project development process work from start to finish?",
+    answer: "Our project process follows 4 clear stages: (1) Requirement Analysis & Architecture, (2) Prototype Design & Hardware/Software Setup, (3) Development, Testing & Code Review, and (4) Final Deployment, Documentation, and Live Demonstration."
+  },
+  {
     question: "How do I apply for an internship?",
     answer: "You can apply directly through our Internship page by clicking 'Apply Now' on your preferred domain tracks."
+  },
+  {
+    question: "Can I get a custom project for my business or startup?",
+    answer: "Absolutely! We specialize in custom web applications, mobile apps, IoT automation, and AI solutions tailored to your specific business requirements."
   },
   {
     question: "Do you provide Scopus/IEEE publication support?",
     answer: "Yes, we provide end-to-end guidance for research writing, formatting as per Scopus/IEEE standards, and finding suitable publishers."
   },
   {
-    question: "Can I get a custom project for my business?",
-    answer: "Absolutely! We specialize in custom web applications, mobile apps, and AI solutions tailored to your specific business requirements."
-  },
-  {
-    question: "Is the training online or offline?",
-    answer: "We offer flexible modes including online instructor-led sessions and hybrid models depending on the program."
+    question: "Is the training and project guidance online or offline?",
+    answer: "We offer flexible modes including interactive live online mentorship, hardware kit shipments, and hybrid offline sessions depending on the project domain."
   }
 ];

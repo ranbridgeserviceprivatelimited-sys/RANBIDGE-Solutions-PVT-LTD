@@ -67,6 +67,18 @@
     "type": "Private Limited Company"
   },
   "headquarters": "Hyderabad, Telangana, India",
+  "team": [
+    { "name": "R.Gopinath Reddy", "role": "CEO & Founder" },
+    { "name": "V Konda Reddy", "role": "CFO & Co-Founder" },
+    { "name": "A.Naga Ravindra", "role": "CTO" },
+    { "name": "B.Varun Sandesh", "role": "COO" },
+    { "name": "Kakara Lavanya", "role": "Chief Secretary" },
+    { "name": "Devarapalli Charithardha", "role": "HR Executive" },
+    { "name": "Poornima", "role": "Chief Marketing Officer" },
+    { "name": "R Nani Nayak", "role": "Student Ambassador" },
+    { "name": "Kodeti Raghavendra", "role": "Media Partner" },
+    { "name": "Revanth", "role": "Media Partner" }
+  ],
   "target_audience": [
     "Startups",
     "Small Businesses", 
