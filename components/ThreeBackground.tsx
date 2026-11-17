@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import { useLocation } from 'react-router-dom';
@@ -6,11 +5,13 @@ import { useLocation } from 'react-router-dom';
 const ThreeBackground: React.FC = () => {
     const mountRef = useRef<HTMLDivElement>(null);
     const location = useLocation();
-    const isHomePage = location.pathname === '/';
+
+    // Check if on home page (supports root and repository subpaths like GitHub Pages)
+    const normalizedPath = location.pathname.toLowerCase().replace(/\/+$/, '');
+    const isHomePage = normalizedPath === '' || normalizedPath === '/ranbidge-solutions-pvt-ltd';
 
     useEffect(() => {
-        // Keep background animation strictly for the home page
-        if (!isHomePage || !mountRef.current) return;
+        if (!mountRef.current) return;
 
         // --- SCENE SETUP ---
         const scene = new THREE.Scene();
@@ -22,10 +23,18 @@ const ThreeBackground: React.FC = () => {
         const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
         renderer.setSize(window.innerWidth, window.innerHeight);
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        renderer.domElement.style.position = 'absolute';
+        renderer.domElement.style.top = '0';
+        renderer.domElement.style.left = '0';
+        renderer.domElement.style.width = '100%';
+        renderer.domElement.style.height = '100%';
+        renderer.domElement.style.zIndex = '1';
+        renderer.domElement.style.pointerEvents = 'none';
+
         mountRef.current.appendChild(renderer.domElement);
 
         // --- OBJECTS ---
-        // === VOLUMETRIC ANIMATED PARTICLES FOR HOME PAGE ===
+        // === VOLUMETRIC ANIMATED PARTICLES FOR ALL PAGES ===
         const particlesGeometry = new THREE.BufferGeometry();
         const count = 1500;
         const posArray = new Float32Array(count * 3);
@@ -97,8 +106,7 @@ const ThreeBackground: React.FC = () => {
             }
             renderer.dispose();
         };
-
-    }, [isHomePage]);
+    }, []);
 
     // --- SCROLL BLUR LOGIC (HOME PAGE ONLY) ---
     useEffect(() => {
@@ -132,7 +140,7 @@ const ThreeBackground: React.FC = () => {
         >
             {isHomePage && (
                 <div
-                    className="absolute inset-0 opacity-80 pointer-events-none bg-cover bg-center"
+                    className="absolute inset-0 opacity-80 pointer-events-none bg-cover bg-center z-0"
                     style={{
                         backgroundImage: `url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop')`
                     }}
